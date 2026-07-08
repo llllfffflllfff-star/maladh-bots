@@ -5,7 +5,7 @@ const { spawn } = require('child_process');
 http.createServer((req, res) => {
     res.writeHead(200);
     res.end('Bots are alive.');
-}).listen(8080, () => console.log('Keep-alive server running on port 8080'));
+}).listen(process.env.PORT || 8080, () => console.log(`Keep-alive server running on port ${process.env.PORT || 8080}`));
 
 
 const bots = [
